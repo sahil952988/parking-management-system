@@ -1,0 +1,173 @@
+body {
+  padding-top: 100px;
+}
+
+.navbar {
+  background: #16222E;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.mynav {
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  width: 200px;
+  height: 40px;
+}
+
+.nav-items {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  color: white;
+}
+
+.nav-items a,
+.mobile-menu a,
+.mobile-menu p {
+  color: white;
+  text-decoration: none;
+}
+
+.popularLocation {
+  background: #00A651;
+  border-radius: 5px;
+  padding: 5px 8px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  background: #16222E;
+  position: fixed;
+  top: 100px;
+  right: 0;
+
+  width: 100%;
+  padding: 20px;
+  z-index: 9998;
+}
+
+.mobile-menu a,
+.mobile-menu p {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 80px;
+  }
+
+  body {
+    padding-top: 80px;
+  }
+
+  .mobile-menu {
+    top: 80px;
+  }
+}
+
+
+
+/* -----for logout and myprofile --------  */
+/* container */
+.user-menu {
+  position: relative;
+}
+
+/* user icon */
+#box1 {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+#box1:hover {
+  color: #2563eb;
+}
+
+/* dropdown */
+.dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 170px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: drop 0.25s ease;
+  z-index: 1000;
+}
+
+/* animation */
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* items */
+.dropdown p,
+.dropdown a {
+  padding: 12px 15px;
+  margin: 0;
+  display: block;
+  font-size: 14px;
+  color: #111827;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* hover */
+.dropdown p:hover {
+  background: #f1f5f9;
+}
+
+.dropdown a:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* hide */
+.hidden {
+  display: none;
+}

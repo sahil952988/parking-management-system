@@ -1,0 +1,130 @@
+/* Body and Background */
+body {
+  background-image: url("/assets/images/carDrivingImage.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  align-items: center;
+  margin: 0;
+}
+
+/* Dark overlay to make form stand out */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+/* Signup Card Container */
+.signup-card {
+  position: relative;
+  top: 50px;
+  width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+
+
+/* Form Title */
+h2 {
+  margin-bottom: 1.5rem;
+  color: #1b5e20;
+  font-weight: 600;
+}
+
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  flex: 1;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #333;
+  font-weight: 600;
+}
+
+
+input,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s ease;
+  font-size: 0.95rem;
+}
+
+input:focus,
+select:focus {
+  border-color: #2e7d32;/
+}
+
+button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+.login {
+  margin-top: 10px;
+  color: #1b5e20;
+  font-size: 0.9rem;
+}
+
+.login a {
+  color: #2e7d32;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
+
+/* Vehicle Info Title */
+.signup-container h3 {
+  color: #1b5e20;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Responsive: Stack inputs on mobile */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+}

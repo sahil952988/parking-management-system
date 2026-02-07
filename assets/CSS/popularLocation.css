@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.popular-location {
+  padding: 60px 8%;
+  background-color: #f5f7fa;
+}
+
+.popular-location h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #1a2b3c;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.location-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+}
+
+.location-card h3 {
+  margin-bottom: 15px;
+  color: #0f9d58;
+  font-size: 20px;
+}
+
+.location-card ul {
+  list-style: none;
+}
+
+.location-card ul li {
+  padding: 6px 0;
+  color: #333;
+  font-size: 15px;
+}
