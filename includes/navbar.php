@@ -17,6 +17,9 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <!-- Desktop Menu -->
     <div class="nav-items desktop-menu">
+
+      <a href="/parking/pages/Bookings.php">Book Now</a>
+
       <a class="popularLocation" href="/parking/pages/popularLocation.php">Popular Location</a>
       <a href="/parking/pages/blog.php">Blog</a>
 
@@ -32,7 +35,7 @@ if (session_status() === PHP_SESSION_NONE) {
           </div>
 
           <div id="box2" class="dropdown hidden">
-            <p class="profile">👤 My Profile</p>
+            <a class="profile" href="/parking/auth/userProfile.php">👤 My Profile</a>
             <a href="/parking/auth/logout.php" class="logout">🚪 Logout</a>
           </div>
         </div>
