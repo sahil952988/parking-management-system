@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Book Your Parking Space</title>
+  <title>Book Parking</title>
   <link rel="stylesheet" href="/parking/assets/CSS/bookings.css?v=<?php echo time(); ?>">
 </head>
 
@@ -13,68 +13,81 @@
   <?php include __DIR__ . "/../includes/header.php"; ?>
 
 
-  <section class="booking-section">
-    <div class="booking-card">
+  <section class="booking-container">
 
-      <h1>Book Your Parking Space</h1>
-      <p class="slogan">Reserve your slot easily and securely</p>
+    <!-- LEFT : USER INFO -->
+    <div class="user-card">
+      <h3>User Info</h3>
 
-      <form class="booking-form">
+      <div class="info"><span>First Name:</span> David</div>
+      <div class="info"><span>Last Name:</span> Smith</div>
+      <div class="info"><span>Email:</span> david@gmail.com</div>
+      <div class="info"><span>Phone:</span> 9800000000</div>
+      <div class="info"><span>Vehicle Type:</span> Car</div>
+      <div class="info"><span>Vehicle Color:</span> Black</div>
+      <div class="info"><span>Plate No:</span> BA66PA99</div>
+    </div>
 
-        <div class="form-row">
-          <input type="text" placeholder="First Name">
-          <input type="text" placeholder="Last Name">
+    <!-- RIGHT : LOCATION + SLOTS -->
+    <div class="booking-right">
+
+      <!-- SEARCH LOCATION -->
+      <div class="location-search">
+        <input type="text" placeholder="Search Location">
+      </div>
+
+      <!-- DATE & TIME -->
+      <div class="date-time">
+        <input type="date">
+        <input type="time">
+      </div>
+
+      <!-- SLOTS -->
+      <div class="slots-wrapper">
+        <h4>Available Slots</h4>
+
+        <div class="slots-grid">
+          <div class="slot available">A1</div>
+          <div class="slot occupied">A2</div>
+          <div class="slot picked">A3</div>
+          <div class="slot reserved">A4</div>
+          <div class="slot available">A5</div>
+
+          <div class="slot occupied">B1</div>
+          <div class="slot available">B2</div>
+          <div class="slot reserved">B3</div>
+          <div class="slot picked">B4</div>
+          <div class="slot available">B5</div>
+
+          <div class="slot available">C1</div>
+          <div class="slot occupied">C2</div>
+          <div class="slot available">C3</div>
+          <div class="slot reserved">C4</div>
+          <div class="slot available">C5</div>
         </div>
+      </div>
 
-        <div class="form-row">
-          <input type="email" placeholder="Enter your email">
-          <input type="text" placeholder="phone Number">
+
+      <div class="slot-legend">
+        <div class="legend-item">
+          <span class="legend-box available"></span> Available
         </div>
-
-        <div class="form-row">
-          <select>
-            <option>Vehicle Type</option>
-            <option value="">car</option>
-            <option value="">bike</option>
-          </select>
-          <input type="text" placeholder="Vehicle Color">
+        <div class="legend-item">
+          <span class="legend-box occupied"></span> Occupied
         </div>
-
-        <div class="form-row">
-          <input type="text" placeholder="Plate Number">
+        <div class="legend-item">
+          <span class="legend-box picked"></span> Picked
         </div>
-
-        <div class="form-row">
-          <select>
-            <option>Select Parking Location</option>
-            <option value="">civil mall</option>
-            <option value="">Norvic hospital</option>
-          </select>
+        <div class="legend-item">
+          <span class="legend-box reserved"></span> Reserved
         </div>
-        <div class="form-row">
-          <select>
-            <option>Select Parking slot</option>
-            <option value="">A1</option>
-            <option value="">B1</option>
-          </select>
-        </div>
+      </div>
 
-
-
-
-        <div class="form-row">
-          <input type="date">
-          <input type="time">
-        </div>
-
-        <button type="submit">Book Now</button>
-
-      </form>
+      <button class="book-btn">Book Slot</button>
 
     </div>
   </section>
 
-  <script src="script.js"></script>
 </body>
 
 </html>
